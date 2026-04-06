@@ -1,0 +1,12 @@
+cat << 'EOF' > queries.txt
+password
+| rex "from (?<ip>[^\s]+)"
+| stats count by ip
+
+password
+| rex "for (invalid user )?(?<user>\w+)"
+| stats count by user
+
+password
+| timechart count
+EOF
