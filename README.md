@@ -1,4 +1,3 @@
-cat << 'EOF' > README.md
 # 🔍 SOC Project 5 — Incident Investigation (Brute Force Attack)
 
 ## 📌 Objective
@@ -15,9 +14,4 @@ Investigate SSH logs to identify brute force attack patterns.
 - rajvarma
 
 ## 🧠 Conclusion
-Brute force attack detected with successful login.
-
-## 🔐 Recommendations
-- Enable MFA
-- Account lockout policy
-EOF
+Brute force attack detected.
