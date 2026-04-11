@@ -1,26 +1,34 @@
-cat << 'EOF' > report.md
-# 🚨 SOC Incident Report
+# 📄 Incident Report — Brute Force Attack
 
-## Summary
-Brute force attack detected on SSH.
+## 1. Summary
+Suspicious login activity detected for user "yash".
 
-## Attacker
-IP: ::1 (localhost)
+---
 
-## Stats
-Total: 8
-Failed: 6
-Success: 2
+## 2. What Happened
+Multiple failed login attempts were followed by a successful login.
 
-## Users
-fakeuser, rajvarma
+---
 
-## Timeline
-Attack occurred within seconds.
+## 3. Logs Observed
+- Event ID 4625 → Failed login
+- Event ID 4624 → Successful login
 
-## Conclusion
-Automated brute force attack.
+---
 
-## Recommendation
-Enable MFA and monitoring
-EOF
+## 4. Indicators
+- User: yash
+- Multiple failed attempts
+- Rapid login attempts
+
+---
+
+## 5. Analysis
+This pattern indicates a brute force attack where attacker tried multiple passwords and succeeded.
+
+---
+
+## 6. Mitigation
+- Reset user password
+- Monitor account activity
+- Enable strong password policy
